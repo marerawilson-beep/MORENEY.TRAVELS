@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moreney Travels Limited | Kenya Coast and Safari Stays and Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF3F3;--surface:#fff;--ink:#10233A;--muted:#5A6B7B;--line:#D3DDE0;--brand:#0F6E73;--brand-ink:#fff;--gold:#E3A72F;--hero:#10233A;--hero-ink:#fff;--save:#137A45;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--surface:#13212E;--ink:#E9F0F3;--muted:#98A9B6;--line:#243544;--brand:#3CB6BB;--brand-ink:#08222A;--hero:#0F2A3A;--save:#5FD196}}
+:root[data-theme="dark"]{--bg:#0B1620;--surface:#13212E;--ink:#E9F0F3;--muted:#98A9B6;--line:#243544;--brand:#3CB6BB;--brand-ink:#08222A;--hero:#0F2A3A;--save:#5FD196}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0;line-height:1.1}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.logo span{color:var(--gold)}
+
+.hero{background:var(--hero);color:var(--hero-ink);padding-bottom:64px;position:relative;overflow:hidden}
+.heroart{position:absolute;inset:0 0 0 38%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%)}.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.gi img,.heroart img{width:100%;height:100%;object-fit:cover;display:block}.heroart svg{width:100%;height:100%;display:block}.hero .wrap{position:relative;z-index:1}
+.gal{padding-top:24px;padding-bottom:8px}.galgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:14px}.galgrid figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}.gi{aspect-ratio:5/3}.gi svg{width:100%;height:100%;display:block}.galgrid figcaption{padding:8px 12px;font-size:14px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:0 0 56px}.cbox{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;color:inherit;text-decoration:none}.cbox b{display:block;font:700 18px "Bricolage Grotesque",sans-serif;margin-bottom:2px}.cbox span{color:var(--muted);font-size:15px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1FAF5A;color:#fff;font-weight:600;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:5}
+.wab{display:block;text-align:center;margin-top:8px;text-decoration:none;background:transparent!important;color:var(--brand)!important;border:1px solid var(--brand)}.wab[aria-disabled=true]{opacity:.45;pointer-events:none}
+@media(max-width:900px){.heroart{inset:0;opacity:.35;-webkit-mask-image:none;mask-image:none}}
+.hero h1{font-size:clamp(34px,6vw,64px);max-width:16ch;margin-top:36px;letter-spacing:-.03em}
+.hero p{max-width:52ch;opacity:.85;font-size:18px;margin:16px 0 28px}
+.search{background:var(--surface);color:var(--ink);border-radius:16px;padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr)) auto;gap:12px;align-items:end;position:relative;z-index:1;box-shadow:0 14px 40px rgba(0,0,0,.25)}
+.search label{font-size:13px;color:var(--muted);font-weight:600;display:block;margin-bottom:4px}
+.search input,.search select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.btn{background:var(--brand);color:var(--brand-ink);border:0;border-radius:10px;padding:12px 20px;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.gold{background:var(--gold);color:#10233A}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+main{padding:44px 0 20px}
+.grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:14px 0 18px}
+.tabs,.chips{display:flex;flex-wrap:wrap;gap:8px}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:600}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip{padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:14px}
+.chip[aria-pressed=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card.sel{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand)}
+.thumb{height:120px;position:relative;overflow:hidden}.thumb svg{position:absolute;inset:0;width:100%;height:100%}.thumb span{position:absolute;left:10px;bottom:8px;color:#fff;font-weight:600;font-size:13px;background:rgba(0,0,0,.5);padding:3px 8px;border-radius:6px}
+.body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.body h3{font-size:18px}
+.meta{color:var(--muted);font-size:14px}
+.price{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:8px}
+.price b{font:700 22px "Bricolage Grotesque",sans-serif}
+.price small{color:var(--muted)}
+.card .btn{padding:9px 14px;font-size:14px}
+.card .btn.on{background:transparent;color:var(--brand);border:1px solid var(--brand)}
+.empty{padding:28px;border:1px dashed var(--line);border-radius:12px;color:var(--muted)}
+aside{position:sticky;top:calc(76px + env(safe-area-inset-top,0px));background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+aside h2{font-size:22px;margin-bottom:4px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row.tot{border:0;font:700 24px "Bricolage Grotesque",sans-serif;padding-top:14px}
+.save{color:var(--save);font-weight:600}
+.hint{color:var(--muted);font-size:14px;margin:8px 0 14px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:48px 0}
+.why h3{font-size:19px;margin-bottom:6px}
+.why p{color:var(--muted);margin:0}
+footer{background:var(--hero);color:var(--hero-ink);padding:32px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;opacity:.9}
+.ov{position:fixed;inset:0;background:rgba(5,12,18,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:10}
+.ov.open{display:flex}
+.modal{background:var(--surface);border-radius:16px;max-width:460px;width:100%;padding:24px;max-height:92vh;overflow:auto}
+.modal input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);margin:4px 0 12px}
+.pay{display:flex;gap:8px;margin:4px 0 16px;flex-wrap:wrap}
+.pay label{border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:14px}
+.pay input{width:auto;margin:0 6px 0 0}
+.err{color:#C0392B;font-size:14px;min-height:20px}
+footer a{color:inherit;margin-left:18px;text-decoration:underline;cursor:pointer}
+.modal.legal{max-width:720px}
+.legal h2{font-size:26px;margin-bottom:4px}.legal h3{font-size:17px;margin:18px 0 4px}.legal p,.legal li{font-size:15px;color:var(--muted);margin:4px 0}.legal ul{padding-left:20px;margin:4px 0}
+.legal .upd{font-size:13px}
+.ag{display:flex;gap:8px;font-size:14px;margin-bottom:10px;align-items:flex-start}.ag input{width:auto!important;margin:3px 0 0!important}.ag a{color:var(--brand)}
+.top{background:var(--hero);color:#fff;position:sticky;top:0;z-index:8;padding-top:env(safe-area-inset-top,0px)}.bar2{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}.top .logo{color:#fff;text-decoration:none;white-space:nowrap}
+.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:0;align-items:center}.top nav li{position:relative}
+.top nav a,.top nav button.dt{color:#fff;background:none;border:0;padding:18px 9px;cursor:pointer;font-weight:500;text-decoration:none;font-size:14.5px;display:block;margin:0;white-space:nowrap}
+.top nav a:hover,.top nav button.dt:hover{color:var(--gold)}.dt:after{content:" \25BE"}
+.menu{position:absolute;left:0;top:100%;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px!important;display:none;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:9}
+.top nav .menu a{color:var(--ink);padding:9px 12px;border-radius:6px}.top nav .menu a:hover{background:var(--bg);color:var(--brand)}
+li.dd:hover>.menu,li.dd.open>.menu,li.dd:focus-within>.menu{display:flex}
+.mb{display:none;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:8px 14px;cursor:pointer}
+@media(max-width:1200px){.mb{display:block}.top nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--hero);padding:8px 20px 16px;max-height:80vh;overflow:auto}.top nav.open{display:block}.top nav ul{flex-direction:column;align-items:stretch}.menu{position:static;box-shadow:none;background:rgba(255,255,255,.08);border:0}li.dd:hover>.menu,li.dd:focus-within>.menu{display:none}li.dd.open>.menu{display:flex}.top nav .menu a{color:#fff}}
+.pg{padding-top:28px;padding-bottom:64px}.pg h2{font-size:24px;margin:28px 0 10px}.pg .lead{font-size:18px;max-width:70ch;margin:0 0 14px}.pg p{max-width:75ch}
+.phero{height:230px;border-radius:16px;overflow:hidden;position:relative;margin-bottom:22px;background:var(--hero)}.phero img,.phero svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.phero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.65))}.phero h1{position:absolute;left:22px;bottom:16px;z-index:1;color:#fff;font-size:clamp(28px,5vw,44px)}
+a.btn{text-decoration:none;display:inline-block;text-align:center}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.links a{padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;background:var(--surface)}.links a:hover{border-color:var(--brand);color:var(--brand)}
+.enq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:24px;max-width:640px}.enq label{font-size:13px;color:var(--muted);font-weight:600;display:block;margin:10px 0 4px}.enq input,.enq select,.enq textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font:inherit;color:inherit}.enq textarea{min-height:90px}.enq .err{margin-top:8px}
+details.post{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0;max-width:780px}details.post summary{cursor:pointer;font:700 19px "Bricolage Grotesque",sans-serif}details.post .meta{margin:4px 0 8px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}aside{position:static}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar2"><a class="logo" href="#/">Moreney<span>.</span> Travels</a><button class="mb" id="mb" aria-expanded="false" aria-controls="nv">Menu</button><nav id="nv" aria-label="Main"><ul>
+<li><a href="#/">Home</a></li>
+<li class="dd"><button class="dt" aria-haspopup="true">Kenya</button><ul class="menu"><li><a href="#/kenya-coast">Kenya Coast</a></li><li><a href="#/kenya-safari">Safari Parks</a></li><li><a href="#/kenya-tips">Travel Tips</a></li></ul></li>
+<li class="dd"><button class="dt" aria-haspopup="true">Destinations</button><ul class="menu"><li><a href="#/d/kikambala">Kikambala</a></li><li><a href="#/d/diani-beach">Diani Beach</a></li><li><a href="#/d/watamu">Watamu</a></li><li><a href="#/d/lamu">Lamu</a></li><li><a href="#/d/maasai-mara">Maasai Mara</a></li><li><a href="#/d/amboseli">Amboseli</a></li><li><a href="#/d/tsavo">Tsavo</a></li></ul></li>
+<li class="dd"><button class="dt" aria-haspopup="true">Tour Packages</button><ul class="menu"><li><a href="#/packages/safari">Safari Packages</a></li><li><a href="#/packages/beach">Beach Holidays</a></li><li><a href="#/packages/honeymoon">Honeymoon Packages</a></li><li><a href="#/packages/family">Family Holidays</a></li></ul></li>
+<li><a href="#/car-hire">Car Hire</a></li>
+<li><a href="#/blog">Blog</a></li>
+<li><a href="#/team-building">Team Building</a></li>
+<li class="dd"><button class="dt" aria-haspopup="true">School Trips</button><ul class="menu"><li><a href="#/school/safari">Educational Safaris</a></li><li><a href="#/school/coastal">Coastal Ecology Trips</a></li><li><a href="#/school/cultural">Cultural Heritage Trips</a></li></ul></li>
+<li><a href="#/about">About Us</a></li>
+<li><a href="#/contact">Contact</a></li>
+</ul></nav></div></header>
+<div id="home">
+<div class="hero">
+ <div class="heroart" id="heroart"></div>
+ <div class="wrap">
+    <h1>Kenya's coast and wildlife, booked in one go.</h1>
+  <p>Beach resorts from Kikambala to Lamu, safari lodges in the Mara and Amboseli, and the tours that go with them. Book a stay and a tour together and save 10%. All prices in US dollars.</p>
+  <div class="search" role="search">
+   <div><label for="dest">Destination</label><select id="dest"></select></div>
+   <div><label for="cin">Check-in</label><input type="date" id="cin"></div>
+   <div><label for="cout">Check-out</label><input type="date" id="cout"></div>
+   <div><label for="gst">Guests</label><select id="gst"></select></div>
+   <button class="btn gold" id="go">Search stays and tours</button>
+  </div>
+ </div>
+</div>
+
+<main class="wrap" id="trip">
+ <div class="grid">
+  <section>
+   <h2 id="resTitle">Build your trip</h2>
+   <div class="bar">
+    <div class="tabs" role="tablist"><button class="tab" role="tab" data-t="stays" aria-selected="true">Stays</button><button class="tab" role="tab" data-t="tours" aria-selected="false">Tours</button></div>
+    <div class="chips" id="chips"></div>
+   </div>
+   <div class="cards" id="cards"></div>
+  </section>
+  <aside aria-live="polite">
+   <h2>Your trip</h2>
+   <div class="meta" id="tripMeta"></div>
+   <div id="lines"></div>
+   <p class="hint" id="hint"></p>
+   <button class="btn" id="book" style="width:100%" disabled>Book now</button><a class="btn wab" id="wa2" href="#" target="_blank" rel="noopener" aria-disabled="true">Send this trip on WhatsApp</a>
+  </aside>
+ </div>
+</main>
+
+<section class="wrap gal" id="gallery"><h2>Coast and wildlife</h2><p class="hint">From white-sand beaches and Swahili dhows to elephants, lions and giraffes.</p><div class="galgrid" id="galgrid"></div></section>
+<div class="wrap why" id="why">
+ <div><h3>One checkout</h3><p>Lodge and tours on the same dates, one payment, one confirmation.</p></div>
+ <div><h3>Pay how you like</h3><p>M-Pesa, card or PayPal. Every price is in USD with taxes and park fees shown.</p></div>
+ <div><h3>Local operators</h3><p>Kenyan guides and lodges we know by name, not anonymous listings.</p></div>
+ <div><h3>Help on WhatsApp</h3><p>Change dates or add a tour by message, any day of the week.</p></div>
+</div>
+
+<section class="wrap" id="contact"><h2 style="padding:8px 0 14px">Talk to us</h2><div class="contact">
+<a class="cbox" href="https://wa.me/254704718257?text=Hello%20Moreney%20Travels%2C%20I%20would%20like%20to%20plan%20a%20trip." target="_blank" rel="noopener"><b>WhatsApp</b><span>+254 704 718 257. Message us to plan or change a trip.</span></a>
+<a class="cbox" href="tel:+254704718257"><b>Call</b><span>+254 704 718 257</span></a>
+<a class="cbox" href="mailto:ochiengmarera@gmail.com?subject=Trip%20enquiry"><b>Email</b><span>ochiengmarera@gmail.com</span></a></div></section>
+</div>
+<div id="page" class="wrap pg" hidden></div>
+<footer><div class="wrap"><span>&copy; 2026 Moreney Travels Limited, Nairobi, Kenya. <a href="mailto:ochiengmarera@gmail.com" style="margin:0">ochiengmarera@gmail.com</a>, <a href="tel:+254704718257" style="margin:0">+254 704 718 257</a></span><span class="fl"><a href="#terms" data-lg="terms">Terms and Conditions</a><a href="#privacy" data-lg="privacy">Privacy Policy</a><a href="#terms" data-lg="cancel">Cancellations</a></span></div></footer>
+<div class="ov" id="lg"><div class="modal legal" role="dialog" aria-modal="true" aria-labelledby="lgt"><button class="btn" id="lgx" style="float:right;padding:6px 12px">Close</button><div id="lgb"></div></div></div>
+
+<a class="wa" href="https://wa.me/254704718257?text=Hello%20Moreney%20Travels%2C%20I%20would%20like%20to%20plan%20a%20trip." target="_blank" rel="noopener" aria-label="Chat with Moreney Travels on WhatsApp">WhatsApp us</a>
+<div class="ov" id="ov"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div id="mbody"></div></div></div>
+
+<script>
+var DEST=["Kikambala","Diani Beach","Watamu","Lamu","Maasai Mara","Amboseli","Tsavo"];
+var STAYS=[
+{id:"s1",i:"sultan-palace-apartment",n:"Sultan Palace Beach Resort, 2-bed apartment",d:"Kikambala",p:320,k:"palace",m:"Beachfront apartment, pool and beach club, sleeps 4"},
+{id:"s2",i:"sultan-palace-villa",n:"Sultan Palace Ocean Villa",d:"Kikambala",p:1450,k:"palace",m:"Private villa facing the Indian Ocean, sleeps 6"},
+{id:"s3",i:"sultan-palace-studio",n:"Sultan Palace Beach Studio",d:"Kikambala",p:180,k:"sunset",m:"Studio steps from the sand, sleeps 2"},
+{id:"s4",i:"diani-sands-resort",n:"Diani Sands Resort",d:"Diani Beach",p:290,k:"beach",m:"Beachfront, all inclusive"},
+{id:"s5",i:"palm-cove-guesthouse",n:"Palm Cove Guesthouse",d:"Diani Beach",p:180,k:"sunset",m:"Bed and breakfast, 5 min to the beach"},
+{id:"s6",i:"blue-lagoon-lodge",n:"Blue Lagoon Lodge",d:"Watamu",p:260,k:"turtle",m:"Marine park views, half board"},
+{id:"s7",i:"dhow-house-lamu",n:"Dhow House Lamu",d:"Lamu",p:240,k:"dhow",m:"Old town courtyard house, bed and breakfast"},
+{id:"s8",i:"mara-riverside-camp",n:"Mara Riverside Camp",d:"Maasai Mara",p:850,k:"giraffe",m:"Luxury tented camp, full board"},
+{id:"s9",i:"savanna-ridge-lodge",n:"Savanna Ridge Lodge",d:"Maasai Mara",p:420,k:"zebra",m:"Mid-range lodge, half board"},
+{id:"s13",i:"mara-private-villa-camp",n:"Mara Private Villa Camp",d:"Maasai Mara",p:1800,k:"balloon",m:"Private villa with butler and guide, full board, sleeps 4"},
+{id:"s10",i:"elephant-trail-lodge",n:"Elephant Trail Lodge",d:"Amboseli",p:640,k:"elephant",m:"Kilimanjaro views, full board"},
+{id:"s11",i:"kibo-view-camp",n:"Kibo View Camp",d:"Amboseli",p:300,k:"balloon",m:"Simple camp, half board"},
+{id:"s12",i:"red-earth-lodge",n:"Red Earth Lodge",d:"Tsavo",p:480,k:"lion",m:"Waterhole views, full board"}];
+var TOURS=[
+{id:"t1",i:"kisite-snorkel",n:"Kisite Dolphin and Snorkel",d:"Diani Beach",p:120,k:"reef",m:"Boat trip, gear and lunch included"},
+{id:"t2",i:"dhow-sunset-diani",n:"Dhow Sunset Cruise",d:"Diani Beach",p:85,k:"dhow",m:"2 hours, drinks and snacks"},
+{id:"t14",i:"private-beach-dinner",n:"Private Beach Dinner",d:"Diani Beach",p:260,k:"sunset",m:"Candlelit seafood dinner on the sand, per person"},
+{id:"t3",i:"watamu-marine-park",n:"Watamu Marine Park Snorkel",d:"Watamu",p:95,k:"turtle",m:"Glass-bottom boat, turtles and reef fish"},
+{id:"t4",i:"mombasa-old-town",n:"Mombasa Old Town and Fort Jesus",d:"Kikambala",p:75,k:"palace",m:"Half day with a local guide"},
+{id:"t5",i:"haller-park",n:"Haller Park Wildlife Visit",d:"Kikambala",p:60,k:"giraffe",m:"Giraffes, hippos and tortoises, half day"},
+{id:"t6",i:"lamu-sunset-cruise",n:"Lamu Sunset Dhow Cruise",d:"Lamu",p:80,k:"sunset",m:"Sail the channel at golden hour"},
+{id:"t7",i:"lamu-old-town",n:"Lamu Old Town Walk",d:"Lamu",p:55,k:"palace",m:"Half day, local historian"},
+{id:"t8",i:"big-five-game-drive",n:"Big Five Game Drive",d:"Maasai Mara",p:220,k:"lion",m:"Full day, 4x4, picnic lunch"},
+{id:"t9",i:"balloon-safari",n:"Hot Air Balloon Safari",d:"Maasai Mara",p:520,k:"balloon",m:"Sunrise flight and champagne breakfast"},
+{id:"t12",i:"mara-3-day-safari",n:"3-Day Maasai Mara Safari",d:"Maasai Mara",p:1450,k:"giraffe",m:"Private 4x4 and guide, park fees and meals included"},
+{id:"t10",i:"amboseli-elephants",n:"Amboseli Elephant Drive",d:"Amboseli",p:180,k:"elephant",m:"Elephants against Kilimanjaro"},
+{id:"t11",i:"tsavo-game-drive",n:"Tsavo Game Drive",d:"Tsavo",p:210,k:"zebra",m:"Full day, red elephants and plains game"},
+{id:"t13",i:"kenya-5-day-circuit",n:"5-Day Safari Circuit",d:"Tsavo",p:2950,k:"lion",m:"Tsavo, Amboseli and Maasai Mara, private 4x4, all park fees"}];
+function pic(src,k,id,alt){if(typeof IM!=="undefined"){var n=src.replace(/^images\//,"").replace(/\.jpg$/,""),q=MAP[n];if(q&&IM[q])src=IM[q]}return '<img src="'+src+'" alt="'+alt.replace(/"/g,"")+'" loading="lazy" data-k="'+k+'" data-id="'+id+'">'}
+function hy(root){root.querySelectorAll("img[data-k]").forEach(function(im){var f=function(){im.outerHTML=scene(im.dataset.k,im.dataset.id)};im.addEventListener("error",f);if(im.complete&&im.naturalWidth===0)f()})}
+function scene(k,id){
+var h=0,i;for(i=0;i<id.length;i++)h=(h*31+id.charCodeAt(i))%97;var j=h%5;
+var o='<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+k+' illustration">';
+var g=function(a,b){return '<defs><linearGradient id="g'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs><rect width="400" height="240" fill="url(#g'+id+')"/>'};
+var c=function(x,y,r,f){return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+f+'"/>'};
+var e=function(x,y,rx,ry,f,r){return '<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" fill="'+f+'"'+(r?' transform="rotate('+r+' '+x+' '+y+')"':'')+'/>'};
+var rc=function(x,y,w,hh,f){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" fill="'+f+'"/>'};
+var sea=function(y,f){return rc(0,y,400,240-y,f)+'<path d="M0 '+(y+10)+' Q50 '+(y+2)+' 100 '+(y+10)+' T200 '+(y+10)+' T300 '+(y+10)+' T400 '+(y+10)+'" stroke="#fff" stroke-opacity=".4" fill="none"/>'};
+var sand=function(y,f){return '<path d="M0 '+y+' Q200 '+(y-16)+' 400 '+y+' V240 H0Z" fill="'+f+'"/>'};
+var pm=function(x,y,s){return '<g transform="translate('+x+','+y+') scale('+s+')"><path d="M0 0 Q-6 -40 4 -78" stroke="#4a3320" stroke-width="5" fill="none"/><path d="M4 -78 Q-24 -84 -42 -62 M4 -78 Q-18 -100 -40 -92 M4 -78 Q12 -104 34 -96 M4 -78 Q30 -84 44 -60 M4 -78 Q0 -96 -8 -102" stroke="#1F6B3A" stroke-width="6" fill="none" stroke-linecap="round"/></g>'};
+var ac=function(x,y,s){return '<g transform="translate('+x+','+y+') scale('+s+')">'+rc(-3,-42,6,42,'#3b2a1a')+e(0,-48,42,11,'#2F5D2A')+'</g>'};
+var lg=function(xs,y,hh,f){return xs.map(function(x){return '<rect x="'+x+'" y="'+y+'" width="12" height="'+hh+'" rx="4" fill="'+f+'"/>'}).join('')};
+var fish=function(x,y,f,s){return '<g transform="translate('+x+','+y+') scale('+s+')">'+e(0,0,16,8,f)+'<path d="M-14 0 L-26 -8 V8Z" fill="'+f+'"/>'+c(8,-2,2,'#fff')+'</g>'};
+var sav=function(){return g('#F6B26B','#FCE5B3')+c(80+j*20,90,30,'#FFD37A')+rc(0,178,400,62,'#7A6A3A')+ac(330-j*10,180,1)+ac(40,182,.6)};
+var und=function(){return g('#38B6C9','#0B3C49')+'<polygon points="80,0 130,0 190,240 60,240" fill="#fff" opacity=".08"/><polygon points="250,0 290,0 380,240 300,240" fill="#fff" opacity=".08"/>'};
+var fl=function(x,y,s){return '<g transform="translate('+x+','+y+') scale('+s+')"><path d="M-8 60 V100 M6 60 V98" stroke="#F26B8A" stroke-width="3"/>'+e(0,48,26,16,'#F26B8A')+'<path d="M18 40 C44 20 6 0 26 -30" stroke="#F26B8A" stroke-width="7" fill="none" stroke-linecap="round"/>'+c(28,-34,6,'#F26B8A')+'<path d="M32 -36 l10 6 l-10 2z" fill="#222"/></g>'};
+var bl=function(x,y,s,f){return '<g transform="translate('+x+','+y+') scale('+s+')">'+e(0,0,26,32,f)+'<path d="M-6 -30 Q-12 0 -4 30 M6 -30 Q12 0 4 30" stroke="#fff" stroke-opacity=".6" fill="none"/><path d="M-10 32 L-6 50 M10 32 L6 50" stroke="#333"/>'+rc(-8,50,16,10,'#7a4a21')+'</g>'};
+var K={
+sunset:function(){return g('#3A2A6B','#F8A15B')+c(200+j*12,150,34,'#FFE29A')+sea(158,'#1B4F72')+'<rect x="'+(185+j*12)+'" y="158" width="30" height="82" fill="#FFE29A" opacity=".35"/>'+sand(214,'#2b2116')+pm(60,232,1)+pm(345,236,1.1)},
+dhow:function(){return g('#8FD3E8','#E8F7FA')+c(320,60,26,'#FFF3B0')+sea(140,'#17A2A8')+'<path d="M300 148 l18 -18 v18z" fill="#fff"/><g transform="translate('+(150+j*15)+',168)"><path d="M-64 0 Q0 26 74 0 L62 -10 H-52Z" fill="#7a4a21"/>'+rc(0,-76,3,68,'#3b2a1a')+'<path d="M5 -74 L58 -12 H5Z" fill="#fff"/><path d="M-3 -60 L-44 -12 H-3Z" fill="#F7E4B5"/></g>'},
+beach:function(){return g('#7EC8E3','#D9F1F5')+sea(112,'#1FB5BD')+sand(168,'#F1DDB8')+pm(70,196,1)+pm(330,200,1.2)+pm(235,205,.8)+'<path d="M112 176 Q145 142 178 176Z" fill="#E8674A"/>'+rc(144,176,3,30,'#555')},
+reef:function(){return und()+fish(120+j*10,90,'#F5A623',1.2)+fish(260,130,'#E8674A',1)+fish(200,60,'#FFE29A',.8)+fish(320,80,'#F5A623',.9)+'<path d="M30 240 V190 M30 205 L15 190 M30 200 L46 184 M110 240 V200 M110 214 L96 200 M110 210 L124 196" stroke="#E8674A" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M250 240 V196 M250 210 L236 196 M250 206 L266 190 M340 240 V206" stroke="#C05CA6" stroke-width="7" fill="none" stroke-linecap="round"/>'+sand(232,'#E9D6A9')},
+turtle:function(){return und()+e(200,120,52,34,'#5E8C3A')+e(200,120,38,24,'#7CAA4C')+'<path d="M170 120 H230 M200 96 V144" stroke="#5E8C3A" stroke-width="3"/>'+c(264,116,13,'#8DB05A')+c(268,113,2.5,'#000')+e(232,86,28,9,'#8DB05A',-30)+e(232,154,28,9,'#8DB05A',30)+e(160,96,14,6,'#8DB05A',30)+e(160,144,14,6,'#8DB05A',-30)+fish(70,60,'#F5A623',1)+sand(232,'#E9D6A9')},
+palace:function(){return g('#9AD6E8','#FBE3B8')+c(330,54,24,'#FFF3B0')+sea(138,'#17A2A8')+rc(90,110,220,72,'#F3E9D2')+rc(78,88,22,94,'#EADFC4')+rc(300,88,22,94,'#EADFC4')+'<path d="M78 88 A11 11 0 0 1 100 88Z" fill="#E3A72F"/><path d="M300 88 A11 11 0 0 1 322 88Z" fill="#E3A72F"/><path d="M168 110 A32 32 0 0 1 232 110Z" fill="#E3A72F"/>'+rc(199,64,2,14,'#8a6a1f')+[0,1,2,3,4].map(function(n){var x=104+n*40;return '<path d="M'+x+' 182 V152 A10 10 0 0 1 '+(x+20)+' 152 V182Z" fill="#7a4a21"/>'}).join('')+sand(192,'#F1DDB8')+pm(48,218,.9)+pm(360,220,.9)},
+elephant:function(){return sav()+e(190,138,62,38,'#6B6F78')+lg([148,172,208,232],160,34,'#5A5E66')+c(262,122,28,'#6B6F78')+e(244,124,14,24,'#5A5E66')+'<path d="M282 132 Q300 168 284 190" stroke="#6B6F78" stroke-width="13" fill="none" stroke-linecap="round"/><path d="M272 146 Q292 154 296 170" stroke="#fff" stroke-width="4" fill="none"/>'+c(272,116,2.5,'#000')},
+giraffe:function(){return sav()+e(180,140,44,24,'#D9A441')+lg([146,162,196,212],152,42,'#D9A441')+'<polygon points="200,124 218,120 246,50 231,46" fill="#D9A441"/>'+e(244,42,18,9,'#D9A441',-25)+rc(240,26,3,12,'#7a4a21')+rc(248,28,3,12,'#7a4a21')+[[150,134],[176,142],[198,132],[222,100],[234,74],[168,128]].map(function(q){return c(q[0],q[1],5,'#8B5A2B')}).join('')},
+lion:function(){return sav()+lg([150,170,205,225],158,34,'#C9974B')+e(190,148,52,26,'#C9974B')+'<path d="M140 140 Q116 150 120 176" stroke="#C9974B" stroke-width="5" fill="none"/>'+c(120,178,5,'#7B4A1E')+c(250,132,30,'#7B4A1E')+c(252,136,18,'#DDAE66')+c(246,132,2.5,'#000')+c(260,132,2.5,'#000')+e(253,144,6,4,'#5b3a1a')},
+zebra:function(){return sav()+'<defs><clipPath id="c'+id+'"><ellipse cx="190" cy="140" rx="54" ry="28"/></clipPath></defs>'+e(190,140,54,28,'#F4F4F4')+'<g clip-path="url(#c'+id+')">'+[0,1,2,3,4,5,6,7].map(function(n){return '<rect x="'+(140+n*12)+'" y="100" width="6" height="80" fill="#222" transform="skewX(-10)"/>'}).join('')+'</g>'+lg([150,168,204,222],160,32,'#F4F4F4')+'<polygon points="230,128 246,124 268,92 252,88" fill="#F4F4F4"/>'+e(268,90,16,9,'#F4F4F4',-20)+'<path d="M258 80 l4 12 M266 78 l3 12 M246 90 L266 76" stroke="#222" stroke-width="3"/>'},
+flamingo:function(){return g('#F9A8A0','#FFE0B8')+c(90,80,28,'#FFF1C9')+sea(168,'#F2B8B0')+fl(150,90,1)+fl(270,100,.8)},
+balloon:function(){return g('#7EC8E3','#FCE5B3')+rc(0,180,400,60,'#7A6A3A')+ac(60,188,.8)+bl(120,80,1,'#E8674A')+bl(240,60,1.2,'#E3A72F')+bl(320,110,.8,'#17A2A8')}};
+return o+(K[k]||K.sunset)()+'</svg>'}
+var GAL=[["sunset","Sunset over the Indian Ocean"],["dhow","Dhow sailing off Lamu"],["beach","White sand at Diani"],["reef","Kisite coral reef"],["turtle","Turtles at Watamu"],["palace","Sultan Palace, Kikambala"],["elephant","Amboseli elephants"],["giraffe","Maasai giraffe"],["lion","Lions of the Mara"],["zebra","Zebra on the plains"],["flamingo","Flamingos at dusk"],["balloon","Balloon safari, Maasai Mara"],["rhino","Rhino"],["eagle","African fish eagle"],["darter","African darter drying its wings"]];
+function galInit(){document.getElementById("galgrid").innerHTML=GAL.map(function(x,i){return '<figure><div class="gi">'+pic("images/gallery-"+x[0]+".jpg",x[0],"g"+i,x[1])+'</div><figcaption>'+x[1]+'</figcaption></figure>'}).join("");hy(document.getElementById("galgrid"))}
+var S={tab:"stays",dest:"All",stay:null,tours:{},guests:2,nights:3};
+var $=function(i){return document.getElementById(i)};
+var usd=function(n){return "$"+n.toLocaleString("en-US")};
+function iso(d){return d.toISOString().slice(0,10)}
+function init(){
+ $("heroart").innerHTML=pic("images/hero.jpg","sunset","hero","Kenya coast");hy($("heroart"));galInit();
+ var dd=$("dest");dd.innerHTML='<option>All</option>'+DEST.map(function(x){return "<option>"+x+"</option>"}).join("");
+ var g=$("gst");for(var i=1;i<=10;i++){g.innerHTML+='<option value="'+i+'"'+(i==2?" selected":"")+'>'+i+(i>1?" guests":" guest")+'</option>'}
+ var a=new Date();a.setDate(a.getDate()+30);var b=new Date(a);b.setDate(b.getDate()+3);
+ $("cin").min=iso(new Date());$("cin").value=iso(a);$("cout").value=iso(b);
+ $("go").onclick=function(){S.dest=dd.value;S.guests=+g.value;var n=Math.round((new Date($("cout").value)-new Date($("cin").value))/864e5);S.nights=n>0?n:1;if(n<=0){var x=new Date($("cin").value);x.setDate(x.getDate()+1);$("cout").value=iso(x)}render();$("trip").scrollIntoView()};
+ document.querySelectorAll(".tab").forEach(function(t){t.onclick=function(){S.tab=t.dataset.t;document.querySelectorAll(".tab").forEach(function(o){o.setAttribute("aria-selected",o===t)});render()}});
+ $("book").onclick=checkout;render()}
+function render(){
+ $("chips").innerHTML=["All"].concat(DEST).map(function(x){return '<button class="chip" aria-pressed="'+(S.dest===x)+'" data-d="'+x+'">'+x+'</button>'}).join("");
+ document.querySelectorAll(".chip").forEach(function(c){c.onclick=function(){S.dest=c.dataset.d;$("dest").value=S.dest;render()}});
+ var list=(S.tab==="stays"?STAYS:TOURS).filter(function(x){return S.dest==="All"||x.d===S.dest});
+ $("cards").innerHTML=list.length?list.map(card).join(""):'<div class="empty">Nothing here yet for this destination. Try another one.</div>';hy($("cards"));
+ document.querySelectorAll("[data-pick]").forEach(function(b){b.onclick=function(){pick(b.dataset.pick)}});
+ summary()}
+function card(x){
+ var on=S.tab==="stays"?S.stay===x.id:!!S.tours[x.id];
+ var unit=S.tab==="stays"?"per room, per night":"per person";
+ return '<article class="card'+(on?" sel":"")+'"><div class="thumb">'+pic('images/'+x.i+'.jpg',x.k,x.id,x.n)+'<span>'+x.d+'</span></div><div class="body"><h3>'+x.n+'</h3><div class="meta">'+x.m+'</div><div class="price"><div><b>'+usd(x.p)+'</b><br><small>'+unit+'</small></div><button class="btn'+(on?" on":"")+'" data-pick="'+x.id+'">'+(on?"Added":"Add to trip")+'</button></div></div></article>'}
+function pick(id){
+ if(id[0]==="s"){S.stay=S.stay===id?null:id}else{if(S.tours[id])delete S.tours[id];else S.tours[id]=1}
+ render()}
+function calc(){
+ var rooms=Math.ceil(S.guests/2),L=[],sub=0,st=STAYS.filter(function(x){return x.id===S.stay})[0];
+ if(st){var v=st.p*S.nights*rooms;sub+=v;L.push([st.n+"<br><span class='meta'>"+S.nights+" nights x "+rooms+(rooms>1?" rooms":" room")+"</span>",v])}
+ var tn=0;TOURS.forEach(function(t){if(S.tours[t.id]){var v=t.p*S.guests;sub+=v;tn++;L.push([t.n+"<br><span class='meta'>"+S.guests+(S.guests>1?" guests":" guest")+"</span>",v])}});
+ var disc=st&&tn?Math.round(sub*0.1):0;
+ return{L:L,sub:sub,disc:disc,tot:sub-disc,st:st,tn:tn}}
+function summary(){
+ var c=calc();
+ $("tripMeta").textContent=S.guests+(S.guests>1?" guests":" guest")+", "+S.nights+" nights, "+(S.dest==="All"?"any destination":S.dest);
+ var h=c.L.map(function(r){return '<div class="row"><span>'+r[0]+'</span><span>'+usd(r[1])+'</span></div>'}).join("");
+ if(!c.L.length)h='<div class="empty" style="margin-top:12px">Your trip is empty. Add a stay or a tour.</div>';
+ else{h+='<div class="row"><span>Subtotal</span><span>'+usd(c.sub)+'</span></div>';
+  if(c.disc)h+='<div class="row save"><span>Stay + tour saving (10%)</span><span>-'+usd(c.disc)+'</span></div>';
+  h+='<div class="row tot"><span>Total</span><span>'+usd(c.tot)+'</span></div>'}
+ $("lines").innerHTML=h;
+ $("hint").textContent=!c.L.length?"":(c.st&&c.tn?"Bundle saving applied.":(c.st?"Add a tour to save 10% on the whole trip.":"Add a stay and a tour to save 10%."));
+ $("book").disabled=!c.L.length;
+ var w=$("wa2");if(c.L.length){var nm=c.L.map(function(r){return r[0].split("<br>")[0]}).join(", ");w.href="https://wa.me/254704718257?text="+encodeURIComponent("Hello Moreney Travels, I would like to book: "+nm+" for "+S.guests+(S.guests>1?" guests":" guest")+", "+S.nights+" nights. Total: "+usd(c.tot)+" USD.");w.setAttribute("aria-disabled","false")}else{w.href="#";w.setAttribute("aria-disabled","true")}}
+function checkout(){
+ var c=calc();
+ $("mbody").innerHTML='<h2 id="mt" style="font-size:24px;margin-bottom:6px">Complete your booking</h2><div class="meta" style="margin-bottom:14px">Total to pay: <b style="color:var(--ink)">'+usd(c.tot)+' USD</b></div><label for="fn">Full name</label><input id="fn" autocomplete="name"><label for="em">Email</label><input id="em" type="email" autocomplete="email"><label for="ph">Phone (WhatsApp)</label><input id="ph" type="tel" autocomplete="tel"><div class="meta">Payment method</div><div class="pay"><label><input type="radio" name="pm" checked>M-Pesa</label><label><input type="radio" name="pm">Card</label><label><input type="radio" name="pm">PayPal</label></div><label class="ag"><input id="ag" type="checkbox"><span>I have read and agree to the <a href="#terms" data-lg="terms">Terms and Conditions</a>, <a href="#terms" data-lg="cancel">Cancellation Policy</a> and <a href="#privacy" data-lg="privacy">Privacy Policy</a>.</span></label><div class="err" id="err"></div><div style="display:flex;gap:8px"><button class="btn" id="pay" style="flex:1">Pay '+usd(c.tot)+'</button><button class="btn" id="cx" style="background:transparent;color:var(--ink);border:1px solid var(--line)">Cancel</button></div>';
+ $("ov").classList.add("open");$("fn").focus();
+ $("cx").onclick=close;wireLg($("mbody"));
+ $("pay").onclick=function(){
+  if(!$("fn").value.trim()||!/\S+@\S+\.\S+/.test($("em").value)||!$("ph").value.trim()){$("err").textContent="Enter your name, a valid email and your phone number.";return}
+  if(!$("ag").checked){$("err").textContent="Please accept the Terms, Cancellation Policy and Privacy Policy to continue.";return}
+  var ref="MT-"+Math.random().toString(36).slice(2,8).toUpperCase();
+  $("mbody").innerHTML='<h2 id="mt" style="font-size:24px;margin-bottom:8px">Booking confirmed</h2><p>Thank you, '+$("fn").value.trim().replace(/</g,"&lt;")+'. Your reference is <b>'+ref+'</b>. We will send vouchers to '+$("em").value.replace(/</g,"&lt;")+' and confirm details on WhatsApp.</p><p class="meta">This is a demo. No payment was taken.</p><button class="btn" id="dn" style="width:100%">Done</button>';
+  $("dn").onclick=function(){S.stay=null;S.tours={};close();render()}}}
+var CO="Moreney Travels Limited (&ldquo;Moreney&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), a company registered in Kenya, [Registration No.], [Physical address], Nairobi";
+var LG={
+terms:["Terms and Conditions",`<p class="upd">Last updated: 29 September 2026</p>
+<h3>1. Who we are</h3><p>This website is operated by ${CO}. We arrange hotel stays, tours and packages provided by independent lodges, camps and tour operators (&ldquo;Suppliers&rdquo;). Contact: ochiengmarera@gmail.com, +254704718257.</p>
+<h3>2. Your booking</h3><p>A booking is confirmed only when you receive a confirmation email with a booking reference. By booking you confirm you are 18 or older and that the details you give are correct. You book on behalf of everyone in your group and are responsible for telling them these terms.</p>
+<h3>3. Prices and payment</h3><ul><li>All prices are shown in US dollars (USD) and include applicable taxes and levies unless stated otherwise.</li><li>Stay prices are per room per night. Tour prices are per person.</li><li>If you pay in Kenya shillings by M-Pesa, the amount is converted at the rate shown at checkout.</li><li>Payment is taken in full at booking unless we tell you otherwise. Card and PayPal fees, if any, are shown before you pay.</li><li>Prices can change until you pay. Once confirmed, your price is fixed.</li></ul>
+<h3>4. Bundle saving</h3><p>The 10% saving applies to the whole booking when it contains at least one stay and at least one tour, booked together in one transaction. If you later cancel the stay or all tours, the saving is removed from the part that remains.</p>
+<h3>5. Changes and cancellations</h3><p>See the Cancellation Policy. Changes are subject to availability and Supplier rules.</p>
+<h3>6. If we or a Supplier must change something</h3><p>We may need to change a booking because of weather, park closures, safety, or a Supplier fault. We will tell you as soon as we can and offer an equivalent alternative, a change of date, or a refund of the affected part.</p>
+<h3>7. Travel documents, health and insurance</h3><p>You are responsible for valid passports, visas or eTA, vaccinations, and travel insurance covering medical costs, cancellation and personal belongings. We strongly recommend insurance for every trip.</p>
+<h3>8. Safety and conduct</h3><p>Follow your guide&rsquo;s instructions on game drives, water activities and balloon flights. Wildlife is wild. Some activities have age, weight or health limits. We or the Supplier may refuse to carry a person whose behaviour puts others at risk, without refund.</p>
+<h3>9. Our responsibility</h3><p>We take reasonable care in choosing Suppliers and arranging your booking. We are not liable for loss or damage caused by events outside our control, such as weather, strikes, government action, or acts of third parties. Nothing in these terms limits liability that cannot be limited by law, including your rights as a consumer.</p>
+<h3>10. Complaints</h3><p>Tell your guide or the Supplier at once so it can be fixed on the spot. If it is not resolved, contact us within 14 days of your trip ending and we will respond within 14 days.</p>
+<h3>11. Governing law</h3><p>These terms are governed by the laws of Kenya and the courts of Kenya have jurisdiction, without affecting any mandatory consumer rights you have where you live.</p>`],
+cancel:["Cancellation Policy",`<p class="upd">Last updated: 29 September 2026</p>
+<p>Cancel by emailing ochiengmarera@gmail.com or messaging +254704718257 with your booking reference. The date we receive your request counts.</p>
+<ul><li><b>30 days or more before arrival:</b> full refund minus a 5% administration fee.</li><li><b>15 to 29 days before arrival:</b> 50% refund.</li><li><b>14 days or fewer before arrival, or no-show:</b> no refund.</li></ul>
+<p>Balloon safaris, park and conservancy fees, and peak-season stays (15 December to 5 January and July to September) may be non-refundable once paid to the Supplier. This is shown on the listing before you pay.</p>
+<p>Date changes are free up to 30 days before arrival, subject to availability and any price difference. Refunds go back to the original payment method within 14 working days.</p>`],
+privacy:["Privacy Policy",`<p class="upd">Last updated: 29 September 2026</p>
+<p>This policy explains how ${CO}, the data controller, handles your personal data under the Data Protection Act, 2019 (Kenya).</p>
+<h3>Data we collect</h3><ul><li>Details you give us: name, email, phone or WhatsApp number, travel dates, number of guests, and special requests such as dietary needs.</li><li>Payment details: handled by our payment providers (such as M-Pesa, card processors and PayPal). We do not store full card numbers.</li><li>Technical data: device and browser type, pages visited, and approximate location from your IP address.</li></ul>
+<h3>Why we use it</h3><ul><li>To make and manage your booking, take payment, and send confirmations and vouchers (contract).</li><li>To meet legal, tax and accounting duties (legal obligation).</li><li>To keep the site secure and improve it (legitimate interest).</li><li>To send offers by email or WhatsApp only if you opt in. You can opt out at any time.</li></ul>
+<h3>Who we share it with</h3><p>Lodges, camps and tour operators you book, so they can host you. Payment providers. Hosting, email and analytics providers acting on our instructions. Authorities when the law requires it. We do not sell your data.</p>
+<h3>Transfers abroad</h3><p>Some providers store data outside Kenya. We only use providers that protect it to a standard the law allows.</p>
+<h3>How long we keep it</h3><p>Booking records for 7 years for tax and legal reasons. Marketing data until you opt out. Website logs for up to 12 months.</p>
+<h3>Your rights</h3><p>You can ask to see, correct or delete your data, object to or restrict how we use it, receive a copy, and withdraw consent. Email ochiengmarera@gmail.com and we will reply within 30 days. You may also complain to the Office of the Data Protection Commissioner (odpc.go.ke).</p>
+<h3>Cookies</h3><p>We use essential cookies to run the site and optional analytics cookies only with your consent.</p>
+<h3>Security and children</h3><p>We use encryption and access controls to protect your data. Our services are for adults. We collect children&rsquo;s details only from a parent or guardian as part of a booking.</p>
+<h3>Changes</h3><p>We will post updates here with a new date.</p>`]};
+function showLg(k){var x=LG[k];$("lgb").innerHTML='<h2 id="lgt">'+x[0]+'</h2>'+x[1];$("lg").classList.add("open");$("lg").querySelector(".modal").scrollTop=0}
+function wireLg(root){root.querySelectorAll("[data-lg]").forEach(function(a){a.onclick=function(e){e.preventDefault();showLg(a.dataset.lg)}})}
+$("lgx").onclick=function(){$("lg").classList.remove("open")};
+$("lg").onclick=function(e){if(e.target===$("lg"))$("lg").classList.remove("open")};
+wireLg(document);
+if(location.hash==="#privacy")showLg("privacy");else if(location.hash==="#terms")showLg("terms");
+function close(){$("ov").classList.remove("open")}
+$("ov").onclick=function(e){if(e.target===$("ov"))close()};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){close();$("lg").classList.remove("open")}});
+
+var WA="254704718257";
+function wl(m){return "https://wa.me/"+WA+"?text="+encodeURIComponent(m)}
+function sl(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+function ph(slug,k,t){return '<div class="phero">'+pic("images/page-"+slug+".jpg",k,"p"+slug.replace(/[^a-z0-9]/g,""),t)+'<h1>'+t+'</h1></div>'}
+function lk(a){return '<div class="links">'+a.map(function(x){return '<a href="#/'+x[0]+'">'+x[1]+'</a>'}).join("")+'</div>'}
+function rows(a,u){return a.map(function(x){return '<div class="row"><span><b>'+x.n+'</b><br><span class="meta">'+x.m+'</span></span><span>'+usd(x.p)+'<br><span class="meta">'+u+'</span></span></div>'}).join("")}
+function enq(kind,label){return '<div class="enq" data-kind="'+kind+'"><h3>'+kind+' enquiry</h3><label>Your name</label><input data-f="Name" autocomplete="name"><label>Phone or WhatsApp</label><input data-f="Phone" type="tel" autocomplete="tel"><label>Email</label><input data-f="Email" type="email" autocomplete="email"><label>'+label+'</label><input data-f="Details"><label>Message</label><textarea data-f="Message"></textarea><div class="err"></div><button class="btn" data-send="1" style="margin-top:10px">Send on WhatsApp</button></div>'}
+function card2(x,unit,k){return '<article class="card"><div class="thumb">'+pic("images/"+sl(x.n)+".jpg",k||x.k||"sunset","c"+sl(x.n).replace(/-/g,""),x.n)+'<span>'+(x.days||"")+'</span></div><div class="body"><h3>'+x.n+'</h3><div class="meta">'+x.d+'</div><div class="price"><div><b>'+usd(x.p)+'</b><br><small>'+unit+'</small></div><a class="btn" href="'+wl("Hello Moreney Travels, I would like to enquire about: "+x.n+" ("+usd(x.p)+" "+unit+").")+'" target="_blank" rel="noopener">Enquire</a></div></div></article>'}
+var DD=[
+{s:"kikambala",n:"Kikambala",k:"palace",t:"A quiet white-sand beach on the North Coast of Kilifi County, about 25 km from Mombasa. It is home to the Sultan Palace Beach Resort villas and apartments.",b:"Families, couples and long beach stays"},
+{s:"diani-beach",n:"Diani Beach",k:"beach",t:"A long white-sand beach on the South Coast, with warm water, palm-lined sand and easy boat trips to the coral reefs and dolphins at Kisite.",b:"Beach holidays, snorkelling and honeymoons"},
+{s:"watamu",n:"Watamu",k:"turtle",t:"A relaxed coastal town known for its marine park, coral gardens and sea turtle conservation.",b:"Snorkelling, diving and nature lovers"},
+{s:"lamu",n:"Lamu",k:"dhow",t:"A Swahili island town and UNESCO World Heritage Site, with narrow streets, donkeys instead of cars and dhows sailing at sunset.",b:"Culture, history and slow travel"},
+{s:"maasai-mara",n:"Maasai Mara",k:"lion",t:"Kenya\u2019s best-known game reserve, with lions, elephants, giraffes and the wildebeest migration, which usually peaks between July and October.",b:"First safaris, big cats and balloon flights"},
+{s:"amboseli",n:"Amboseli",k:"elephant",t:"Open plains and large elephant herds beneath Mount Kilimanjaro, especially good for photography.",b:"Elephants, photography and views"},
+{s:"tsavo",n:"Tsavo",k:"zebra",t:"One of Kenya\u2019s largest parks, with red-dusted elephants, wide landscapes and fewer crowds.",b:"Quiet safaris and combined coast and bush trips"}];
+var PKG=[
+{c:"safari",n:"3-Day Maasai Mara Safari",days:"3 days",p:1450,k:"lion",d:"Private 4x4 and guide, park fees and all meals."},
+{c:"safari",n:"4-Day Amboseli and Tsavo Safari",days:"4 days",p:1650,k:"elephant",d:"Elephants under Kilimanjaro, then Tsavo\u2019s red earth."},
+{c:"safari",n:"5-Day Safari Circuit",days:"5 days",p:2950,k:"giraffe",d:"Tsavo, Amboseli and Maasai Mara with all park fees."},
+{c:"safari",n:"4-Day Mara Balloon and Luxury Camp",days:"4 days",p:3900,k:"balloon",d:"Luxury tented camp, sunrise balloon flight and private game drives."},
+{c:"safari",n:"7-Day Kenya Grand Safari",days:"7 days",p:4800,k:"zebra",d:"Four parks, premium lodges and a private guide."},
+{c:"beach",n:"4-Day Kikambala Beach Escape",days:"4 days",p:780,k:"palace",d:"Sultan Palace beachfront apartment, dhow cruise and Haller Park visit."},
+{c:"beach",n:"5-Day Diani Beach Holiday",days:"5 days",p:1100,k:"beach",d:"Beach resort stay, Kisite dolphin and snorkel trip, sunset dhow."},
+{c:"beach",n:"5-Day Lamu Swahili Retreat",days:"5 days",p:1280,k:"dhow",d:"Old town courtyard house, dhow cruise and heritage walks."},
+{c:"beach",n:"6-Day Watamu Marine Escape",days:"6 days",p:1350,k:"turtle",d:"Marine park snorkelling, turtle conservation visit and reef trips."},
+{c:"honeymoon",n:"5-Day Safari and Beach Honeymoon",days:"5 days",p:3200,k:"sunset",d:"Two nights in the Mara, three on the beach, private dinner included."},
+{c:"honeymoon",n:"7-Day Mara and Diani Honeymoon",days:"7 days",p:4900,k:"balloon",d:"Luxury camp, balloon flight and a beachfront resort."},
+{c:"honeymoon",n:"10-Day Kenya Luxury Honeymoon",days:"10 days",p:9800,k:"palace",d:"Private villas, private guides, balloon flight and Sultan Palace ocean villa."},
+{c:"family",n:"4-Day Family Beach Break",days:"4 days",p:950,k:"beach",d:"Sultan Palace beach apartment, kids-friendly boat trip and wildlife park visit."},
+{c:"family",n:"5-Day Kids Wildlife Adventure",days:"5 days",p:1900,k:"giraffe",d:"Maasai Mara lodge, family game drives and a village visit."},
+{c:"family",n:"6-Day Family Safari and Beach",days:"6 days",p:2400,k:"elephant",d:"Amboseli safari followed by three nights at the coast."}];
+var PT={safari:["Safari Packages","Private game drives, park fees and lodges included.","lion"],beach:["Beach Holidays","White sand, warm water and boat trips on the Kenyan coast.","beach"],honeymoon:["Honeymoon Packages","Romantic stays, private dinners and quiet camps.","sunset"],family:["Family Holidays","Easy pacing, family rooms and child-friendly activities.","giraffe"]};
+var CARS=[
+{n:"Saloon Car",days:"4 seats",p:60,k:"beach",d:"Self-drive or with driver, for city and coast transfers."},
+{n:"Toyota Prado SUV",days:"5 seats",p:130,k:"sunset",d:"Comfortable 4x4 for longer trips and rougher roads."},
+{n:"Safari Van with Pop-up Roof",days:"7 seats",p:220,k:"zebra",d:"With driver-guide, the classic safari vehicle for small groups."},
+{n:"Land Cruiser Safari 4x4",days:"6 seats",p:280,k:"lion",d:"With driver-guide, pop-up roof and cool box."},
+{n:"25-Seater Coaster Bus",days:"25 seats",p:380,k:"palace",d:"With driver, for school trips, weddings and team events."}];
+var TEAM=[
+{n:"Beach Retreat",days:"3 days",p:650,k:"beach",d:"Kikambala or Diani. Beach games, dhow cruise, workshop session and group dinners."},
+{n:"Safari Retreat",days:"4 days",p:1150,k:"giraffe",d:"Maasai Mara or Amboseli. Game drives, bush dinner and team challenges."},
+{n:"Coast and Conference",days:"5 days",p:1600,k:"sunset",d:"Diani. Meeting room, daytime sessions, snorkelling and a private beach dinner."}];
+var SCH={
+safari:{t:"Educational Safaris",k:"giraffe",days:"3 days",p:520,d:"Learn about ecosystems, wildlife and conservation on a guided game drive, with worksheets your teachers can adapt.",li:["Guided game drives with a trained driver-guide","Conservation and food chain sessions","Simple lodge or camp accommodation","Transport from Nairobi"]},
+coastal:{t:"Coastal Ecology Trips",k:"turtle",days:"4 days",p:560,d:"Study coral reefs, mangroves and marine life on the coast, including a marine park visit.",li:["Glass-bottom boat and snorkelling","Mangrove and beach ecology walks","Turtle conservation visit","Full-board accommodation"]},
+cultural:{t:"Cultural Heritage Trips",k:"palace",days:"3 days",p:500,d:"Explore Swahili history and Kenyan culture through old towns, forts and community visits.",li:["Fort Jesus and Mombasa Old Town","Swahili town walking tour","Community and craft visit","Coach transport and guide"]}};
+var BL=[
+["When is the best time to visit Kenya?","September 2026","Game viewing is usually best in the dry months, roughly June to October and January to February. The Maasai Mara migration typically peaks between July and October. The coast is warm all year, with the heaviest rains commonly in April and May. Book early for July, August and December."],
+["Why Kikambala is the quiet side of the coast","September 2026","Kikambala sits on the North Coast, about 25 km from Mombasa. The beach is quieter than Diani, and the Sultan Palace resort gives you villas and apartments right on the sand. It is a good base for Haller Park, Mombasa Old Town and Fort Jesus."],
+["What to pack for a Kenyan safari","September 2026","Bring neutral-coloured clothes, a warm layer for early game drives, a hat, sunscreen, binoculars and a camera. Pack light in a soft bag because safari vehicles and small planes have limited space. Add swimwear if you are ending on the coast."],
+["Amboseli or Maasai Mara: how to choose","September 2026","Choose the Mara for lions, cheetahs and the migration season. Choose Amboseli for large elephant herds and Kilimanjaro views. If you have five days or more, combine them and add Tsavo for a quieter finish."]];
+function pgDest(s){var x=DD.filter(function(d){return d.s===s})[0];if(!x)return null;
+ return ph("d-"+s,x.k,x.n)+'<p class="lead">'+x.t+'</p><p><b>Best for:</b> '+x.b+'</p><button class="btn" data-plan="'+x.n+'">Plan a trip to '+x.n+'</button><h2>Stays in '+x.n+'</h2>'+(rows(STAYS.filter(function(y){return y.d===x.n}),"per night")||'<p class="meta">Coming soon.</p>')+'<h2>Tours in '+x.n+'</h2>'+(rows(TOURS.filter(function(y){return y.d===x.n}),"per person")||'<p class="meta">Coming soon.</p>')}
+function pgPkg(c){var t=PT[c];if(!t)return null;
+ return ph("packages-"+c,t[2],t[0])+'<p class="lead">'+t[1]+' Prices are per person sharing, in USD.</p>'+lk([["packages/safari","Safari"],["packages/beach","Beach"],["packages/honeymoon","Honeymoon"],["packages/family","Family"]])+'<div class="cards">'+PKG.filter(function(x){return x.c===c}).map(function(x){return card2(x,"per person sharing")}).join("")+'</div>'+enq("Package","Package name and travel dates")}
+function pgSch(c){var x=SCH[c];if(!x)return null;
+ return ph("school-"+c,x.k,x.t)+'<p class="lead">'+x.d+'</p><p><b>From '+usd(x.p)+' per student</b> for '+x.days+'. Group rates for 20 or more students, ask us for a quote.</p><ul>'+x.li.map(function(i){return "<li>"+i+"</li>"}).join("")+'</ul>'+lk([["school/safari","Educational Safaris"],["school/coastal","Coastal Ecology"],["school/cultural","Cultural Heritage"]])+enq("School trip","School name, number of students and dates")}
+var PGS={
+"kenya-coast":function(){return ph("kenya-coast","sunset","Kenya Coast")+'<p class="lead">Kenya\u2019s coast runs along the Indian Ocean from Lamu in the north to Diani in the south, with white sand, coral reefs, Swahili towns and warm water most of the year.</p>'+lk([["d/kikambala","Kikambala"],["d/diani-beach","Diani Beach"],["d/watamu","Watamu"],["d/lamu","Lamu"]])+'<h2>Beach stays</h2>'+rows(STAYS.filter(function(y){return["Kikambala","Diani Beach","Watamu","Lamu"].indexOf(y.d)>-1}),"per night")},
+"kenya-safari":function(){return ph("kenya-safari","lion","Safari Parks")+'<p class="lead">From the plains of the Maasai Mara to elephants under Kilimanjaro in Amboseli and the red earth of Tsavo. Game drives run in 4x4 vehicles with a driver-guide.</p>'+lk([["d/maasai-mara","Maasai Mara"],["d/amboseli","Amboseli"],["d/tsavo","Tsavo"],["packages/safari","Safari packages"]])+'<h2>Safari stays</h2>'+rows(STAYS.filter(function(y){return["Maasai Mara","Amboseli","Tsavo"].indexOf(y.d)>-1}),"per night")},
+"kenya-tips":function(){return ph("kenya-tips","balloon","Travel Tips")+'<ul><li><b>Best time:</b> dry months, roughly June to October and January to February, are best for game viewing. The coast is warm all year.</li><li><b>Entry rules:</b> requirements change, so check the current Kenya entry and eTA rules before you travel.</li><li><b>Health:</b> ask your doctor about vaccinations and malaria prevention.</li><li><b>Insurance:</b> take travel insurance covering medical costs and cancellation.</li><li><b>Money:</b> our prices are in USD. Checkout accepts M-Pesa, card or PayPal.</li><li><b>Packing:</b> neutral colours, a warm layer for early drives, sunscreen and binoculars.</li></ul>'+lk([["blog","Read our blog"],["contact","Ask us a question"]])},
+"car-hire":function(){return ph("car-hire","zebra","Car Hire")+'<p class="lead">Cars, safari vehicles and buses, with or without a driver. Prices are per day in USD. Fuel, park fees and driver accommodation are quoted separately.</p><div class="cards">'+CARS.map(function(x){return card2(x,"per day")}).join("")+'</div>'+enq("Car hire","Vehicle, pick-up place and dates")},
+"blog":function(){return ph("blog","sunset","Blog")+BL.map(function(b){return '<details class="post"><summary>'+b[0]+'</summary><div class="meta">'+b[1]+'</div><p>'+b[2]+'</p></details>'}).join("")},
+"team-building":function(){return ph("team-building","beach","Team Building")+'<p class="lead">Retreats for companies and teams of 10 or more, on the beach or in the bush. Prices are per person sharing, in USD. Group size and dates change the final quote.</p><div class="cards">'+TEAM.map(function(x){return card2(x,"per person sharing")}).join("")+'</div>'+enq("Team building","Company name, group size and dates")},
+"about":function(){return ph("about","palace","About Us")+'<p class="lead">Moreney Travels Limited is a Nairobi-based company that puts stays and tours together in one booking, so you pay once and travel with one plan.</p><p>We arrange beach resorts and safari lodges across Kenya\u2019s coast and parks, plus the tours, transfers and cars that go with them. You can build a trip yourself on the home page or message us and we will build it for you.</p><h2>What we care about</h2><ul><li>Clear prices in US dollars, with taxes shown up front.</li><li>Local guides and operators we know by name.</li><li>One point of contact on WhatsApp, before and during your trip.</li></ul>'+lk([["contact","Contact us"],["packages/safari","See packages"]])},
+"contact":function(){return ph("contact","dhow","Contact")+'<p class="lead">Message us on WhatsApp, call, or email.</p><div class="contact" style="max-width:820px"><a class="cbox" href="'+wl("Hello Moreney Travels, I would like to plan a trip.")+'" target="_blank" rel="noopener"><b>WhatsApp</b><span>+254 704 718 257</span></a><a class="cbox" href="tel:+254704718257"><b>Call</b><span>+254 704 718 257</span></a><a class="cbox" href="mailto:ochiengmarera@gmail.com?subject=Trip%20enquiry"><b>Email</b><span>ochiengmarera@gmail.com</span></a></div>'+enq("General","Travel dates and number of guests")}};
+function P(p){var a=p.split("/");if(a[0]==="d")return pgDest(a[1]);if(a[0]==="packages")return pgPkg(a[1]);if(a[0]==="school")return pgSch(a[1]);return PGS[p]?PGS[p]():null}
+function route(){var h=location.hash,hm=$("home"),pg=$("page");
+ $("nv").classList.remove("open");$("mb").setAttribute("aria-expanded","false");document.querySelectorAll("li.dd.open").forEach(function(x){x.classList.remove("open")});
+ if(h.indexOf("#/")===0&&h.length>2){var f=P(h.slice(2));if(f){hm.hidden=true;pg.hidden=false;pg.innerHTML=f;hy(pg);window.scrollTo(0,0);return}}
+ hm.hidden=false;pg.hidden=true}
+$("mb").onclick=function(){var o=$("nv").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+document.querySelectorAll("button.dt").forEach(function(b){b.onclick=function(){var li=b.parentNode,was=li.classList.contains("open");document.querySelectorAll("li.dd.open").forEach(function(x){x.classList.remove("open")});if(!was)li.classList.add("open")}});
+$("page").addEventListener("click",function(e){var t=e.target;
+ if(t.dataset.plan){S.dest=t.dataset.plan;$("dest").value=S.dest;render();location.hash="#/";setTimeout(function(){$("trip").scrollIntoView()},50);return}
+ if(t.dataset.send){var box=t.closest(".enq"),m="Hello Moreney Travels. "+box.dataset.kind+" enquiry.",ok=true;
+  box.querySelectorAll("[data-f]").forEach(function(i){if(i.value.trim())m+=" "+i.dataset.f+": "+i.value.trim()+".";});
+  var nm=box.querySelector("[data-f=Name]").value.trim(),ph2=box.querySelector("[data-f=Phone]").value.trim();
+  if(!nm||!ph2){box.querySelector(".err").textContent="Enter your name and phone number.";return}
+  box.querySelector(".err").textContent="";var a=document.createElement("a");a.href=wl(m);a.target="_blank";a.rel="noopener";a.click()}});
+document.addEventListener("click",function(e){if(!e.target.closest(".top nav")&&!e.target.closest("#mb")){document.querySelectorAll("li.dd.open").forEach(function(x){x.classList.remove("open")})}});
+init();route();window.addEventListener("hashchange",route);
+</script>
+</body>
+</html>
